@@ -1,0 +1,27 @@
+# Bitrix ядро (не храним в Git)
+bitrix/
+upload/
+
+# Кэш и временные файлы
+bitrix/cache/
+bitrix/managed_cache/
+bitrix/tmp/
+bitrix/stack/
+
+# Логи
+*.log
+
+# Файлы сборки фронта
+/frontend/dist/
+
+# Системные файлы ОС
+.DS_Store
+Thumbs.db
+
+# IDE и редакторы
+.vscode/
+.idea/
+
+# Любые временные файлы
+*.tmp
+*.swp
