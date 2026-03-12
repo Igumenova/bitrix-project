@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
+const BASE_URL = 'http://176.108.254.225'
+
 export default defineConfig({
   plugins: [vue()],
   server: {
@@ -8,11 +10,11 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/bitrix': {
-        target: 'http://176.108.254.225',
+        target: BASE_URL,
         changeOrigin: true
       },
       '/local': {
-        target: 'http://176.108.254.225',
+        target: BASE_URL,
         changeOrigin: true
       }
     }

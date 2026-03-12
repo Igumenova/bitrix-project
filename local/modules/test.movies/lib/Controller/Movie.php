@@ -1,6 +1,8 @@
 <?php
 namespace Test\Movies\Controller;
 
+require_once $_SERVER['DOCUMENT_ROOT'].'/local/config/config.php';
+
 use Bitrix\Main\Engine\Controller;
 use Bitrix\Main\Loader;
 use CFile;
@@ -93,10 +95,11 @@ class Movie extends Controller
 
             $pictureUrl = null;
 
+
             if ($item['PREVIEW_PICTURE']) {
                 $picturePath = CFile::GetPath($item['PREVIEW_PICTURE']);
                 if ($picturePath) {
-                    $pictureUrl = 'http://176.108.254.225' . $picturePath;
+                    $pictureUrl = BASE_URL . $picturePath; 
                 }
             }
 
@@ -166,8 +169,8 @@ class Movie extends Controller
             'duration' => $props['DURATION']['VALUE'] ?? null,
             'age' => $props['AGE']['VALUE'] ?? null,
             'tags' => $props['TAGS']['VALUE'] ?? [],
-            'previewPicture' => $fields['PREVIEW_PICTURE'] ? 'http://176.108.254.225' . CFile::GetPath($fields['PREVIEW_PICTURE']) : null,
-            'detailPicture' => $fields['DETAIL_PICTURE'] ? 'http://176.108.254.225' . CFile::GetPath($fields['DETAIL_PICTURE']) : null,
+            'previewPicture' => $fields['PREVIEW_PICTURE'] ? BASE_URL . CFile::GetPath($fields['PREVIEW_PICTURE']) : null,
+            'detailPicture'  => $fields['DETAIL_PICTURE'] ? BASE_URL . CFile::GetPath($fields['DETAIL_PICTURE']) : null,  
         ];
     }
 
