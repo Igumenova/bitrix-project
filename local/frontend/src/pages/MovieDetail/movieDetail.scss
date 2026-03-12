@@ -1,0 +1,77 @@
+.movie-detail {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  color: $text-main;
+
+  .back-btn {
+    background: none;
+    border: none;
+    color: $accent;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+    &:hover {
+      color: $accent-hover;
+    }
+  }
+
+  .content {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .poster {
+      flex: 1 1 300px;
+      max-width: 400px;
+
+      img {
+        width: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    .info {
+      flex: 2 1 400px;
+
+      .title {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+
+      .description {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: $text-secondary;
+      }
+
+      .tags-container {
+        padding: 10px 0;
+      }
+    }
+  }
+
+  .loading {
+    text-align: center;
+    color: $accent;
+    font-size: 16px;
+    padding: 50px 0;
+  }
+}
+
+@include mobile {
+  .movie-detail .content {
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    .poster {
+      max-width: 100%;
+    }
+  }
+}

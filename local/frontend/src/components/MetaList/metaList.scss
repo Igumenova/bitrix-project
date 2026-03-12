@@ -1,0 +1,17 @@
+  .meta-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    li {
+      font-size: 14px;
+
+      strong {
+        color: $text-secondary;
+        margin-right: 6px;
+      }
+    }
+  }

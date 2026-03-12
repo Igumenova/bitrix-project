@@ -1,0 +1,28 @@
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .message {
+    text-align: center;
+    font-size: 16px;
+    color: $text-muted;
+  }
+
+  .btn-more {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: $accent;
+    color: $text-main;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: $accent-hover;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+}
+
+body {
+  background: $bg-main;
+
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+}
+
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 5px;
+}
