@@ -13,16 +13,16 @@
 
 .vscode/
 
-.access.php
-.bottom.menu.php
-.htaccess
-.left.menu_ext.php
-.personal.menu.php
-.section.php
-.top.menu.php
-404.php
-favicon.ico
-index.php
-sect_bottom.php
-sect_sidebar.php
-urlrewrite.php
+/.access.php
+/.bottom.menu.php
+/.htaccess
+/.left.menu_ext.php
+/.personal.menu.php
+/.section.php
+/.top.menu.php
+/404.php
+/favicon.ico
+/index.php
+/sect_bottom.php
+/sect_sidebar.php
+/urlrewrite.php
