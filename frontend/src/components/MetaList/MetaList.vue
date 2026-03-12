@@ -16,5 +16,5 @@
 </script>
 
 <style scoped lang="scss">
-  @import "./metaList.scss";
+  @import './metaList.scss';
 </style>

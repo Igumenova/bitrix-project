@@ -1,49 +1,38 @@
 export const getMovies = (params = {}) => {
-  return BX.ajax.runComponentAction(
-    'test:movies.rest',
-    'list',
-    {
+  return BX.ajax
+    .runComponentAction('test:movies.rest', 'list', {
       mode: 'class',
       data: params
-    }
-  ).then(res => res.data)
+    })
+    .then((res) => res.data)
 }
 
 export const getGenres = () => {
-  return BX.ajax.runComponentAction(
-    'test:movies.rest',
-    'genres',
-    { mode: 'class' }
-  ).then(res => res.data)
+  return BX.ajax
+    .runComponentAction('test:movies.rest', 'genres', { mode: 'class' })
+    .then((res) => res.data)
 }
 
 export const getTags = () => {
-  return BX.ajax.runComponentAction(
-    'test:movies.rest',
-    'tags',
-    { mode: 'class' }
-  ).then(res => res.data)
+  return BX.ajax
+    .runComponentAction('test:movies.rest', 'tags', { mode: 'class' })
+    .then((res) => res.data)
 }
 
 export const getCountries = () => {
-  return BX.ajax.runComponentAction(
-    'test:movies.rest',
-    'countries',
-    { mode: 'class' }
-  ).then(res => res.data)
+  return BX.ajax
+    .runComponentAction('test:movies.rest', 'countries', { mode: 'class' })
+    .then((res) => res.data)
 }
 
 export const getMovieDetail = (id) => {
-  return BX.ajax.runComponentAction(
-    'test:movies.rest',
-    'detail',
-    {
+  return BX.ajax
+    .runComponentAction('test:movies.rest', 'detail', {
       mode: 'class',
       data: { id }
-    }
-  ).then(res => res.data)
+    })
+    .then((res) => res.data)
 }
-
 
 //через модуль
 

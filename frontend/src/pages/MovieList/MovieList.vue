@@ -11,11 +11,11 @@
 
     <MovieGrid :movies="movies" />
 
+    <div v-if="loading" class="message">Загрузка...</div>
+
     <div v-if="!loading && movies.length === 0" class="message">
       По вашему запросу ничего не найдено
     </div>
-
-    <div v-if="loading" class="message">Загрузка...</div>
 
     <button class="btn-more" @click="loadMore" v-if="!loading && page < totalPages">
       Загрузить ещё
@@ -29,11 +29,12 @@
   import MovieGrid from '../../components/MovieGrid/MovieGrid.vue'
   import MovieFilters from '../../components/MovieFilters/MovieFilters.vue'
 
+
   const movies = ref([])
   const genres = ref([])
   const tags = ref([])
   const countries = ref([])
-  const loading = ref(false)
+  const loading = ref(true)
   const page = ref(1)
   const totalPages = ref(1)
 
@@ -41,7 +42,8 @@
     genreId: null,
     country: null,
     tags: [],
-    search: ''
+    search: '',
+    pageSize: 9
   })
 
   const loadMovies = async () => {
